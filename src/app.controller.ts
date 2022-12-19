@@ -17,6 +17,9 @@ import { AuthExceptionFilter } from './common/filters/auth-exceptions.filter';
 @Controller()
 @UseFilters(AuthExceptionFilter)
 export class AppController {
+  getHello(): any {
+    throw new Error('Method not implemented.');
+  }
   constructor(private readonly appService: AppService) {}
 
   @Get('/')
@@ -28,6 +31,7 @@ export class AppController {
   @UseGuards(LoginGuard)
   @Post('/login')
   login(@Res() res: Response): void {
+    console.log(res);
     res.redirect('/home');
   }
 

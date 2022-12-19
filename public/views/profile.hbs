@@ -5,11 +5,9 @@
         <h2 class='mdl-card__title-text'>About {{user.username}}</h2>
       </div>
       <div>
-        {{! https://picsum.photos/200 }}
-        {{!-- http://lorempixel.com/400/200/cats/{{user.pet.picId}} --}}
         <figure><img src='https://picsum.photos/400/200' />
           <figcaption style='margin-top: 20px;'>{{user.username}}'s friend
-            {{user.pet.name}}</figcaption>
+            {{user.pet_name}}</figcaption>
         </figure>
         <div class='mdl-card__actions mdl-card--border'>
           <a class='mdl-button' href='/logout'>Log Out</a>
